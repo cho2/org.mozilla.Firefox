@@ -1,0 +1,54 @@
+{
+    "id" : "org.mozilla.Firefox",
+    "runtime" : "org.gnome.Platform",
+    "runtime-version" : "3.24",
+    "sdk" : "org.gnome.Sdk",
+    "build-options" : {
+        "cflags" : "-O2 -g",
+        "cxxflags" : "-O2 -g",
+        "env" : {
+            "V" : "1"
+        }
+    },
+    "command" : "firefox",
+    "modules" : [
+        {
+            "name" : "firefox",
+            "buildsystem": "simple",
+            "sources" : [
+                {
+                    "url" : "https://download-installer.cdn.mozilla.net/pub/firefox/releases/57.0/linux-x86_64/en-US/firefox-57.0.tar.bz2",
+                    "sha256" : "c2cae016089e816c03283a359c582efab3bca34e6048ecc2382b43c1eb342457",
+                    "type" : "archive"
+                },
+                {
+                    "dest" : "",
+                    "path" : "org.mozilla.Firefox.appdata.xml",
+                    "type" : "file"
+                },
+                {
+                    "dest" : "",
+                    "path" : "org.mozilla.Firefox.desktop",
+                    "type" : "file"
+                }
+            ],
+            "build-commands": [
+               "mkdir -p /app/bin",
+               "mkdir -p /app/share/appdata",
+               "mkdir -p /app/share/applications",
+               "cp -R * /app/bin/",
+               "cp org.mozilla.Firefox.desktop /app/share/applications/org.mozilla.Firefox.desktop",
+               "cp org.mozilla.Firefox.appdata.xml /app/share/appdata/org.mozilla.Firefox.appdata.xml"
+            ]
+        }
+    ],
+    "finish-args" : [
+        "--share=ipc",
+        "--socket=x11",
+        "--socket=wayland",
+        "--filesystem=home:rw",
+        "--share=network",
+        "--socket=pulseaudio",
+        "--device=dri"
+    ]
+}
