@@ -17,7 +17,7 @@
             "buildsystem": "simple",
             "sources" : [
                 {
-                    "url" : "https://download-installer.cdn.mozilla.net/pub/firefox/releases/57.0/linux-x86_64/en-US/firefox-57.0.tar.bz2",
+                    "url" : "https://archive.mozilla.org/pub/firefox/releases/57.0/linux-x86_64/en-US/firefox-57.0.tar.bz2",
                     "sha256" : "c2cae016089e816c03283a359c582efab3bca34e6048ecc2382b43c1eb342457",
                     "type" : "archive"
                 },
