@@ -38,7 +38,9 @@
                "mkdir -p /app/share/applications",
                "cp -R * /app/bin/",
                "cp org.mozilla.Firefox.desktop /app/share/applications/org.mozilla.Firefox.desktop",
-               "cp org.mozilla.Firefox.appdata.xml /app/share/appdata/org.mozilla.Firefox.appdata.xml"
+               "cp org.mozilla.Firefox.appdata.xml /app/share/appdata/org.mozilla.Firefox.appdata.xml",
+               "mkdir -p /app/share/icons/hicolor/64x64/apps/",
+               "cp /app/bin/browser/icons/mozicon128.png /app/share/icons/hicolor/64x64/apps/org.mozilla.Firefox.png"
             ]
         }
     ],
