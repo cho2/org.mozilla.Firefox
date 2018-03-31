@@ -17,8 +17,8 @@
             "buildsystem": "simple",
             "sources" : [
                 {
-                    "url" : "https://archive.mozilla.org/pub/firefox/releases/57.0/linux-x86_64/en-US/firefox-57.0.tar.bz2",
-                    "sha256" : "c2cae016089e816c03283a359c582efab3bca34e6048ecc2382b43c1eb342457",
+                    "url" : "https://archive.mozilla.org/pub/firefox/releases/59.0.2/linux-x86_64/en-US/firefox-59.0.2.tar.bz2",
+                    "sha256" : "be1699906ab25786d68f04a26e31ee6bd0c0cf141d89be7f48fdde3e3496cddb",
                     "type" : "archive"
                 },
                 {
