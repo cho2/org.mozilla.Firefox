@@ -18,7 +18,7 @@
             "sources" : [
                 {
                     "url" : "https://archive.mozilla.org/pub/firefox/releases/60.0.2/linux-x86_64/en-US/firefox-60.0.2.tar.bz2",
-                    "sha256" : "88dabfb289183eb7b0b221c70a46d2f96d0ed989eeb1209dad1c33dc8a7cdd1adde6858cdd562acabe0a5400bf02e7364bdf3cf827945d",
+                    "sha256" : "90e5d4c106ae1756e6834593b357925f48a4e60c539e5f95f4bc323b5b7f4196",
                     "type" : "archive"
                 },
                 {
