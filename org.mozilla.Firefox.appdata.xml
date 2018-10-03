@@ -1,33 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Copyright 2016 Jiri Eischmann <eischmann@redhat.com> -->
-<application>
-  <id type="desktop">org.mozilla.FirefoxDevEdition.desktop</id>
-  <name>Firefox Developer Edition</name>
-  <summary>Mozilla Firefox Developer Edition Web browser</summary>
+<component type="desktop">
+  <id>org.mozilla.Firefox.desktop</id>
   <metadata_license>CC0-1.0</metadata_license>
   <project_license>MPL-2.0</project_license>
-<!--  <project_group>Mozilla</project_group>-->
-  <description>
-    <p>
-      Bringing together all kinds of awesomeness to make browsing better for you. Get to your favorite sites quickly – even if you don’t remember the URLs. Type your term into the location bar (aka the Awesome Bar) and the autocomplete function will include possible matches from your browsing history, bookmarked sites and open tabs.
-    </p>
-    <p>
-      Firefox Developer Edition brings your core dev tools together with some powerful new ones that will extend your ability to work across multiple platforms from one place. It’s everything you’re used to, only better. And only from Firefox.
-    </p>
-    <!-- FIXME: Needs more paragraphs -->
-  </description>
-  <keywords>
-    <keyword>mozilla</keyword>
-    <keyword>internet</keyword>
-    <keyword>web</keyword>
-  </keywords>
-  <url type="homepage">https://www.mozilla.org/firefox/developer/</url>
+  <categories>
+    <category>Utility</category>
+  </categories>
+  <name>Firefox</name>
+  <summary>Mozilla's popular web browser</summary>
+  <description><p>Firefox is one of the world's most popular web browsers. If you have trouble with websites that require Java support, try Firefox. ** Requires internet</p></description>
   <screenshots>
-    <screenshot type="default">https://dl.dropboxusercontent.com/u/1309518/firefox-de.png</screenshot>
-    <screenshot>https://dl.dropboxusercontent.com/u/1309518/firefox-de2.png</screenshot>
-    <screenshot>https://dl.dropboxusercontent.com/u/1309518/firefox-de3.png</screenshot>
+    <screenshot type="default">
+      <image>https://d3lapyynmdp1i9.cloudfront.net/screenshots/org.mozilla.Firefox/C/org.mozilla.firefox-screenshot1.jpg</image>
+    </screenshot>
   </screenshots>
-  <!-- FIXME: change this to an upstream email address for spec updates
-  <updatecontact>someone_who_cares@upstream_project.org</updatecontact>
-   -->
-</application>
+  <metadata>
+    <value key="GnomeSoftware::popular-background">https://d3lapyynmdp1i9.cloudfront.net/thumbnails/org.mozilla.Firefox/org.mozilla.firefox-thumb.jpg</value>
+  </metadata>
+  <content_rating type="oars-1.1">
+    <content_attribute id="social-chat">intense</content_attribute>
+    <content_attribute id="social-info">intense</content_attribute>
+    <content_attribute id="social-audio">intense</content_attribute>
+  </content_rating>
+  <developer_name>The Mozilla Foundation</developer_name>
+  <url type="homepage">https://www.mozilla.org/</url>
+  <url type="bugtracker">https://bugzilla.mozilla.org/describecomponents.cgi?product=Firefox</url>
+  <url type="help">https://support.mozilla.org/en-US/kb/get-started-firefox-overview-main-features</url>
+</component>
