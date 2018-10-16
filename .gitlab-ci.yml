@@ -1,0 +1,44 @@
+stages:
+- test
+
+variables:
+    # Replace with your preferred file name of the resulting Flatpak bundle
+    BUNDLE: "Firefox.flatpak"
+
+flatpak:
+    image: registry.gitlab.gnome.org/gnome/gnome-runtime-images/gnome:3.28
+    stage: test
+    variables:
+        # Replace with your manifest path
+        MANIFEST_PATH: "org.mozilla.Firefox.json"
+        RUNTIME_REPO: "https://sdk.gnome.org/gnome.flatpakrepo"
+        # Replace with your application name, as written in the manifest
+        FLATPAK_MODULE: "firefox"
+        # Make sure to keep this in sync with the Flatpak manifest, all arguments
+        # are passed except the config-args because we build it ourselves
+        MESON_ARGS: "-Dtests=all"
+        DBUS_ID: "org.mozilla.Firefox"
+
+    script:
+        - flatpak-builder --stop-at=${FLATPAK_MODULE} app ${MANIFEST_PATH}
+        # build-commands from manifest
+        - mkdir -p /app/bin
+        - mkdir -p /app/share/appdata
+        - mkdir -p /app/share/applications
+        - cp -R * /app/bin/
+        - cp org.mozilla.Firefox.desktop /app/share/applications/org.mozilla.Firefox.desktop
+        - cp org.mozilla.Firefox.appdata.xml /app/share/appdata/org.mozilla.Firefox.appdata.xml
+        - mkdir -p /app/share/icons/hicolor/64x64/apps/
+        - cp /app/bin/browser/chrome/icons/default/default128.png /app/share/icons/hicolor/64x64/apps/org.mozilla.Firefox.png
+        # Make sure to keep this in sync with the Flatpak manifest, all arguments
+        # are passed except the config-args because we build it ourselves
+        - flatpak-builder --finish-only --repo=repo app ${MANIFEST_PATH}
+        # Generate a Flatpak bundle
+        - flatpak build-bundle repo ${BUNDLE} --runtime-repo=${RUNTIME_REPO} ${DBUS_ID}
+    artifacts:
+        paths:
+            - ${BUNDLE}
+        expire_in: 90 days            
+    cache:
+        paths:
+             - .flatpak-builder/cache
