@@ -17,8 +17,8 @@
             "buildsystem": "simple",
             "sources" : [
                 {
-                    "url" : "https://archive.mozilla.org/pub/firefox/releases/66.0.4/linux-x86_64/en-US/firefox-66.0.4.tar.bz2",
-                    "sha256" : "bfb8de5837fd3174ef08e18ecf2bcd207a5425c628435a76530ca7a81cbd706a",
+                    "url" : "https://archive.mozilla.org/pub/firefox/releases/66.0.5/linux-x86_64/en-US/firefox-66.0.5.tar.bz2",
+                    "sha256" : "482313ff302df0902b971468ed982571d731600b00cb9df29349ea403afcff17",
                     "type" : "archive"
                 },
                 {
