@@ -1,7 +1,7 @@
 {
     "id" : "org.mozilla.Firefox",
     "runtime" : "org.gnome.Platform",
-    "runtime-version" : "3.34",
+    "runtime-version" : "3.32",
     "sdk" : "org.gnome.Sdk",
     "build-options" : {
         "cflags" : "-O2 -g",
